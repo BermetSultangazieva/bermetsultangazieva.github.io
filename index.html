@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bermet Sultangazieva — AI/ML researcher & software engineer (MPhil in Machine Learning and Machine Intelligence, University of Cambridge). AI safety, machine learning, NLP, and low-resource language technologies." />
+  <meta name="author" content="Bermet Sultangazieva" />
+  <meta name="theme-color" content="#102a43" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bermet Sultangazieva — AI/ML Researcher" />
+  <meta property="og:description" content="MPhil in Machine Learning and Machine Intelligence, University of Cambridge. Research in AI safety, NLP, and low-resource language technologies." />
+  <meta property="og:type" content="website" />
+
+  <title>Bermet Sultangazieva — AI/ML Researcher</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#education">Skip to content</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Home — Bermet Sultangazieva">
+        <span class="nav-logo-mark">BS</span>
+        <span class="nav-logo-text">Bermet&nbsp;Sultangazieva</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Awards</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-progress" id="navProgress"></div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="hero-eyebrow">
+            <span class="hero-eyebrow-uni">University of Cambridge</span>
+            <span class="hero-eyebrow-prog">MPhil in Machine Learning and Machine Intelligence</span>
+          </p>
+          <h1 class="hero-name">Bermet Sultangazieva</h1>
+          <p class="hero-title">AI&nbsp;/&nbsp;ML Researcher&nbsp; <span class="hero-title-sep">|</span> &nbsp;Software Engineer</p>
+          <p class="hero-intro">
+            I build and study machine learning systems — from speech models for
+            low-resource languages to questions of AI safety and the security of
+            large language models. At Cambridge I work on AI safety and ethics
+            with <a class="ext-link" href="https://sites.google.com/view/bill-byrne/home/" target="_blank" rel="noopener">Professor Bill Byrne</a>.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-ghost" href="https://github.com/sultangazieva-auca-2021" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/bermet-sultangazieva/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal">
+          <div class="photo-frame">
+            <img class="photo-img" src="bermet.jpg" alt="Bermet Sultangazieva"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="photo-placeholder" role="img" aria-label="Profile photo placeholder" style="display:none;">
+              <span>BS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== JOURNEY NAVIGATION ===== -->
+    <section class="section journey" id="journey">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">Explore</p>
+          <h2 class="section-title">A journey in chapters</h2>
+        </header>
+        <div class="journey-grid">
+          <a class="journey-card reveal" href="#education"><span class="jc-icon">🎓</span><span class="jc-label">Education</span></a>
+          <a class="journey-card reveal" href="#experience"><span class="jc-icon">💼</span><span class="jc-label">Experience</span></a>
+          <a class="journey-card reveal" href="#projects"><span class="jc-icon">🛠</span><span class="jc-label">Projects</span></a>
+          <a class="journey-card reveal" href="#achievements"><span class="jc-icon">🏆</span><span class="jc-label">Awards</span></a>
+          <a class="journey-card reveal" href="#leadership"><span class="jc-icon">🌍</span><span class="jc-label">Leadership</span></a>
+          <a class="journey-card reveal" href="#skills"><span class="jc-icon">🧰</span><span class="jc-label">Skills</span></a>
+          <a class="journey-card reveal" href="#contact"><span class="jc-icon">📬</span><span class="jc-label">Contact</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="section education" id="education">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">Education</p>
+          <h2 class="section-title">Academic timeline</h2>
+        </header>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">Oct 2025 – Aug 2026</span>
+                <span class="timeline-place">Cambridge, England</span>
+              </div>
+              <h3><a class="ext-link" href="https://www.cam.ac.uk" target="_blank" rel="noopener">University of Cambridge</a></h3>
+              <p class="timeline-role">MPhil in Machine Learning &amp; Machine Intelligence</p>
+              <ul>
+                <li>Awarded a full-ride Cambridge Trust scholarship.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">Aug 2021 – May 2025</span>
+                <span class="timeline-place">Bishkek, Kyrgyzstan</span>
+              </div>
+              <h3><a class="ext-link" href="https://www.auca.kg" target="_blank" rel="noopener">American University of Central Asia (AUCA)</a> <span class="gpa">GPA 4.0/4.0</span></h3>
+              <p class="timeline-role">B.A. in Software Engineering</p>
+              <ul>
+                <li>Valedictorian and Commencement Speaker — highest-ranking graduate, class of 2025.</li>
+                <li>President's List (2024–2025); Dean's List (2021–2022, 2022–2023, 2023–2024).</li>
+                <li>Full-ride <a class="ext-link" href="https://uscaef.org" target="_blank" rel="noopener">U.S.-CAEF</a> scholarship — Acceptance rate: 4%.</li>
+                <li>2-year <a class="ext-link" href="https://en.nippon-foundation.or.jp/what/projects/global/jacafa" target="_blank" rel="noopener">JACAFA</a> scholarship — Acceptance rate: 3%.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">Jan 2024 – May 2024</span>
+                <span class="timeline-place">New York, USA</span>
+              </div>
+              <h3><a class="ext-link" href="https://www.bard.edu" target="_blank" rel="noopener">Bard College</a> — Exchange Semester</h3>
+              <p class="timeline-role">Computer Science</p>
+              <ul>
+                <li>Full-ride OSUN Mobility Program scholarship — Acceptance rate: 4%.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">Experience</p>
+          <h2 class="section-title">Professional timeline</h2>
+        </header>
+
+        <div class="tabbed reveal">
+          <div class="seg-tabs" role="tablist" aria-label="Experience categories">
+            <button class="seg-tab active" id="tab-work" data-panel="panel-work" role="tab" aria-selected="true" aria-controls="panel-work">Work experience</button>
+            <button class="seg-tab" id="tab-teaching" data-panel="panel-teaching" role="tab" aria-selected="false" aria-controls="panel-teaching">Teaching experience</button>
+          </div>
+
+          <div class="seg-panel active" id="panel-work" role="tabpanel" aria-labelledby="tab-work">
+            <div class="timeline">
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Oct 2024 – Mar 2025</span></div>
+                  <h3>Cramer's Project</h3>
+                  <p class="timeline-role">Machine Learning / AI Intern &amp; Researcher</p>
+                  <p class="timeline-impact">Advanced ASR, NLP, and speech synthesis for the Kyrgyz language — a low-resource setting.</p>
+                  <ul>
+                    <li>Trained and fine-tuned Wav2Vec2, Whisper, and Matcha-TTS with PyTorch and Hugging Face.</li>
+                    <li>Built and curated speech datasets and audio-processing pipelines for reliable evaluation.</li>
+                    <li>Led benchmarking and error analysis across pretrained ASR models.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Dec 2024 – May 2025</span></div>
+                  <h3>EPAM Systems</h3>
+                  <p class="timeline-role">Business Analytics Intern</p>
+                  <p class="timeline-impact">Worked within a global software engineering environment on internal analytics initiatives.</p>
+                  <ul>
+                    <li>Completed EPAM's Project Management training; studied SDLC and business process management.</li>
+                    <li>Applied Agile methodologies (Scrum, Kanban) through real-world EPAM case studies.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Jun 2024 – Aug 2024</span></div>
+                  <h3>Bard Summer Research Institute</h3>
+                  <p class="timeline-role">Research Assistant — P/NP-Complete Classification of the Tait–Rolfsen Knot Table</p>
+                  <p class="timeline-impact">One of four assistants on a knot-theory project that classifies the computational complexity of knots through quandle colorings — determining which knots give rise to NP-complete problems.</p>
+                  <ul>
+                    <li>Tested knots from the 250-knot Tait–Rolfsen table for NP-completeness using "Sharac" quandle colorings and specialized software.</li>
+                    <li>Designed and built a centralized research database from scratch to track colorings, progress, and annotated results.</li>
+                    <li>Co-authored the resulting manuscript, <em>The Search for Sharac Quandles</em>, and project documentation.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Summer 2023</span></div>
+                  <h3>Pricer LLC (Japanese IT company)</h3>
+                  <p class="timeline-role">Android Mobile Application Developer Intern</p>
+                  <p class="timeline-impact">Earned a Letter of Recommendation and a return offer.</p>
+                  <ul>
+                    <li>Built Android features across 2 projects using OpenGL, AR, and computer vision.</li>
+                    <li>Proposed 2 alternative implementations for core application logic.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="seg-panel" id="panel-teaching" role="tabpanel" aria-labelledby="tab-teaching" hidden>
+            <div class="timeline">
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Jan 2025 – May 2025</span></div>
+                  <h3>AUCA — Algorithms Course</h3>
+                  <p class="timeline-role">Teaching Assistant</p>
+                  <p class="timeline-impact">Supported instruction for 70+ undergraduates.</p>
+                  <ul>
+                    <li>Assisted with grading, quizzes, exams, and feedback across C/C++ problem sets.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Sep 2023 – May 2025</span></div>
+                  <h3>AUCA — Writing &amp; Academic Resource Center</h3>
+                  <p class="timeline-role">Mathematics Tutor</p>
+                  <p class="timeline-impact">Delivered 470+ one-on-one hours to 150+ students.</p>
+                  <ul>
+                    <li>Tutored calculus, linear algebra, discrete mathematics, and statistics.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Oct 2024 – Jan 2025</span></div>
+                  <h3>U.S.-CAEF — Early Scholars Cohort</h3>
+                  <p class="timeline-role">Economics, Math &amp; Programming Tutor</p>
+                  <p class="timeline-impact">Mentored ~17 students across quantitative subjects.</p>
+                  <ul>
+                    <li>Guided students through core concepts and problem-solving in economics, math, and programming.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Jan 2024 – Aug 2024</span></div>
+                  <h3>Bard Math Circle — Bard College, New York</h3>
+                  <p class="timeline-role">Mathematics Tutor</p>
+                  <p class="timeline-impact">Tutored school children in school-level mathematics and undergraduates in university-level mathematics.</p>
+                  <ul>
+                    <li>Ran one-on-one sessions for both school pupils and undergraduate students, strengthening problem-solving and quantitative reasoning across school and university math.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS (research + engineering, merged) ===== -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">Research &amp; engineering</p>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-lead">Selected research, engineering, and applied machine learning — in depth.</p>
+        </header>
+
+        <div class="research-areas reveal">
+          <span class="area-tag">AI Safety</span>
+          <span class="area-tag">AI Ethics</span>
+          <span class="area-tag">LLM Security</span>
+          <span class="area-tag">Jailbreak Research</span>
+          <span class="area-tag">Copyright Extraction</span>
+          <span class="area-tag">Low-Resource Languages</span>
+          <span class="area-tag">Knot Theory &amp; Complexity</span>
+        </div>
+
+        <ol class="proj-list">
+          <li class="proj-item reveal">
+            <div class="proj-head">
+              <h3>Jailbreaking LLMs for Copyrighted Content</h3>
+              <span class="proj-meta">AI Safety &amp; Ethics · LLM Security · MPhil Dissertation · 2025–2026</span>
+            </div>
+            <p class="proj-summary">
+              My MPhil dissertation at the University of Cambridge, supervised by
+              <a class="ext-link" href="https://sites.google.com/view/bill-byrne/home/" target="_blank" rel="noopener">Professor Bill Byrne</a>, in AI safety and ethics: investigating how
+              adversarial prompting can drive large language models to reproduce
+              copyrighted material — and how to defend against it.
+            </p>
+            <ul class="proj-points">
+              <li>Jailbreak robustness — how adversarial prompts bypass safety training, and how to defend against them.</li>
+              <li>Copyright and memorization — when and why models extract or reproduce protected training data.</li>
+              <li>Built on the HarmBench red-teaming framework to evaluate safety and alignment beyond benchmarks, toward real deployment risk.</li>
+            </ul>
+            <div class="proj-tags">
+              <span>AI Safety</span><span>AI Ethics</span><span>Red-Teaming</span><span>Alignment</span><span>Evaluation</span><span>LLMs</span>
+            </div>
+            <div class="proj-links">
+              <a class="btn btn-small btn-ghost" href="Poster_Presentation_Final_MLMI.pdf" target="_blank" rel="noopener">View poster (PDF)</a>
+              <a class="btn btn-small btn-ghost" href="https://github.com/BermetSultangazieva/harmbench-experiments" target="_blank" rel="noopener">GitHub repository</a>
+            </div>
+          </li>
+
+          <li class="proj-item reveal">
+            <div class="proj-head">
+              <h3>Kyrgyz Voice Assistant — Cramer's Project</h3>
+              <span class="proj-meta">Speech &amp; NLP · Low-Resource Languages · Oct 2024 – Mar 2025</span>
+            </div>
+            <p class="proj-summary">
+              End-to-end speech technology for the Kyrgyz language, advancing
+              automatic speech recognition, NLP, and text-to-speech / speech-to-text
+              synthesis for a low-resource language.
+            </p>
+            <ul class="proj-points">
+              <li>Trained and fine-tuned speech models with PyTorch and Hugging Face — Wav2Vec2, Whisper, and Matcha-TTS for Kyrgyz recognition and synthesis.</li>
+              <li>Curated and cleaned audio/text datasets with validated transcriptions and reliable train/validation/test splits.</li>
+              <li>Built preprocessing and audio pipelines that improved dataset quality and training stability.</li>
+              <li>Ran systematic benchmarking and error analysis across pretrained ASR models to close performance gaps on real-world speech.</li>
+            </ul>
+            <div class="proj-tags">
+              <span>PyTorch</span><span>Hugging Face</span><span>Wav2Vec2</span><span>Whisper</span><span>Matcha-TTS</span><span>ASR</span><span>NLP</span>
+            </div>
+            <div class="proj-links">
+              <a class="btn btn-small btn-ghost" href="https://huggingface.co/the-cramer-project" target="_blank" rel="noopener">Hugging Face</a>
+            </div>
+          </li>
+
+          <li class="proj-item reveal">
+            <div class="proj-head">
+              <h3>P/NP-Complete Classification of the Tait–Rolfsen Knot Table</h3>
+              <span class="proj-meta">Theoretical CS · Knot Theory · Bard Summer Research Institute · Summer 2024</span>
+            </div>
+            <p class="proj-summary">
+              One of four research assistants on Professor Robert W. McGrail's
+              long-running ASCLab program (begun in 2008) at the Bard Summer
+              Research Institute, working to classify the computational complexity
+              of every knot in the 250-knot Tait–Rolfsen table.
+            </p>
+            <ul class="proj-points">
+              <li>The program associates to every finite algebra a class of constraint-satisfaction problems (CSPs): "nice" structures — groups, vector spaces, Boolean algebras — yield polynomial-time CSPs, while many others are NP-complete, motivating a conjectured P/NP-complete dichotomy.</li>
+              <li>Since 2008 the lab has linked three-dimensional knots to CSPs through quandle colorings, conjecturing — and, for quandles, proving — a P/NP-complete dichotomy for knots.</li>
+              <li>A special family of "Sharac" quandles forces NP-completeness: whenever a knot admits a non-trivial coloring by one of them, that knot must be NP-complete. Specialized software tests a knot's system of crossing equations against each quandle for such a coloring.</li>
+              <li>Designed and built a centralized research database from scratch to track progress, colorings, and annotated results across the multi-year project.</li>
+              <li>To date the team has verified 118 of the 249 non-trivial knots as NP-complete (97 fully annotated); the long-term goal is a 300–400-page volume devoting a page to each knot.</li>
+              <li>Co-authored the resulting manuscript, <em>The Search for Sharac Quandles</em> (under review, SYNASC 2026).</li>
+            </ul>
+            <div class="proj-tags">
+              <span>Theoretical CS</span><span>Knot Theory</span><span>Quandles</span><span>CSP</span><span>Complexity</span><span>Databases</span><span>Scientific Writing</span>
+            </div>
+          </li>
+
+          <li class="proj-item reveal">
+            <div class="proj-head">
+              <h3>Android AR Applications — Pricer LLC</h3>
+              <span class="proj-meta">Software · Mobile · Computer Vision · Summer 2023</span>
+            </div>
+            <p class="proj-summary">
+              Built interactive Android features across two projects at Pricer LLC,
+              a Japanese IT company, using OpenGL, augmented reality, and computer
+              vision, with performance optimizations.
+            </p>
+            <ul class="proj-points">
+              <li>Implemented internal application logic and UI components across two production projects.</li>
+              <li>Proposed two alternative implementation approaches for core application logic.</li>
+              <li>Earned a Letter of Recommendation from the team lead and a return offer.</li>
+            </ul>
+            <div class="proj-tags">
+              <span>Kotlin</span><span>OpenGL</span><span>AR</span><span>Computer Vision</span>
+            </div>
+          </li>
+        </ol>
+
+        <!-- Publications (within Research) -->
+        <h3 class="research-subhead reveal" id="publications">Publications</h3>
+        <div class="pub-list">
+          <article class="pub-card reveal">
+            <div class="pub-year">2026</div>
+            <div class="pub-body">
+              <h3>Jailbreaking LLMs for Copyrighted Content</h3>
+              <p class="pub-authors">B. Sultangazieva</p>
+              <p class="pub-venue">MPhil research, University of Cambridge — in progress (2025–2026).</p>
+            </div>
+            <a class="btn btn-small btn-ghost" href="Poster_Presentation_Final_MLMI.pdf" target="_blank" rel="noopener">Poster (PDF)</a>
+          </article>
+          <article class="pub-card reveal">
+            <div class="pub-year">2026</div>
+            <div class="pub-body">
+              <h3>The Search for Sharac Quandles</h3>
+              <p class="pub-authors">Robert W. McGrail, Karomat Alimova, Husna Manalai &amp; Bermet Sultangazieva</p>
+              <p class="pub-venue">Awaiting review — SYNASC (International Symposium on Symbolic and Numeric Algorithms for Scientific Computing), Timișoara, Romania.</p>
+            </div>
+            <span class="pub-status">Under review</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACHIEVEMENTS / AWARDS ===== -->
+    <section class="section achievements" id="achievements">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">Milestones</p>
+          <h2 class="section-title">Achievements &amp; awards</h2>
+          <p class="section-lead">A few moments that shaped the path so far.</p>
+        </header>
+        <ol class="milestones">
+          <li class="milestone reveal">
+            <div class="milestone-dot"></div>
+            <div class="milestone-card">
+              <span class="milestone-year">2025</span>
+              <h3><a class="ext-link" href="https://www.cambridgetrust.org" target="_blank" rel="noopener">Cambridge Trust Scholarship</a></h3>
+              <p>Full-ride scholarship to pursue an MPhil in Machine Learning &amp; Machine Intelligence at the University of Cambridge.</p>
+            </div>
+          </li>
+          <li class="milestone reveal">
+            <div class="milestone-dot"></div>
+            <div class="milestone-card">
+              <span class="milestone-year">2025</span>
+              <h3>Valedictorian &amp; Commencement Speaker</h3>
+              <p>Highest-ranking graduate of AUCA's class of 2025 with a 4.0/4.0 GPA — President's List and Dean's List honoree.</p>
+            </div>
+          </li>
+          <li class="milestone reveal">
+            <div class="milestone-dot"></div>
+            <div class="milestone-card">
+              <span class="milestone-year">2025</span>
+              <h3><a class="ext-link" href="https://uscaef.org" target="_blank" rel="noopener">Steven F. Shea Excellence Award</a></h3>
+              <p>Top U.S.-CAEF recognition, awarded to a single graduating fellow per year for academic excellence, leadership, and impact.</p>
+            </div>
+          </li>
+          <li class="milestone reveal">
+            <div class="milestone-dot"></div>
+            <div class="milestone-card">
+              <span class="milestone-year">2025</span>
+              <h3><a class="ext-link" href="https://www.aspireleaders.org" target="_blank" rel="noopener">Aspire Leaders Program Certificate</a></h3>
+              <p>Completed the 40-hour Aspire Leaders Program (3rd Cohort), developing leadership, critical thinking, and social impact.</p>
+            </div>
+          </li>
+          <li class="milestone reveal">
+            <div class="milestone-dot"></div>
+            <div class="milestone-card">
+              <span class="milestone-year">2021</span>
+              <h3>Gold Certificate — General Republican Testing (ORT)</h3>
+              <p>Placed in the national Top&nbsp;50 (~47,000 participants) on Kyrgyzstan's General Republican Testing — the country's nationwide, standardized university-entrance examination — earning a Gold Certificate and eligibility for full scholarships at top universities in Kyrgyzstan and abroad.</p>
+            </div>
+          </li>
+          <li class="milestone reveal">
+            <div class="milestone-dot"></div>
+            <div class="milestone-card">
+              <span class="milestone-year">2021</span>
+              <h3>"Altyn Tamga" Gold Medalist</h3>
+              <p>Graduated 1st in class (1/104) with a Certificate of Secondary Education with Honors — a national distinction.</p>
+            </div>
+          </li>
+          <li class="milestone reveal">
+            <div class="milestone-dot"></div>
+            <div class="milestone-card">
+              <span class="milestone-year">2019</span>
+              <h3>2nd Place — Republican Mathematics Olympiad</h3>
+              <p>Team Bishkek, hosted by the "Altyn Tuyun" Engineering and Technical Academy.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== LEADERSHIP ===== -->
+    <section class="section leadership" id="leadership">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">Beyond research</p>
+          <h2 class="section-title">Leadership &amp; community</h2>
+          <p class="section-lead">Leading teams, building initiatives, and supporting communities across Central Asia and beyond.</p>
+        </header>
+
+        <div class="tabbed reveal">
+          <div class="seg-tabs" role="tablist" aria-label="Leadership categories">
+            <button class="seg-tab active" id="tab-leadership" data-panel="panel-leadership" role="tab" aria-selected="true" aria-controls="panel-leadership">Leadership</button>
+            <button class="seg-tab" id="tab-community" data-panel="panel-community" role="tab" aria-selected="false" aria-controls="panel-community">Community &amp; extracurricular</button>
+          </div>
+
+          <div class="seg-panel active" id="panel-leadership" role="tabpanel" aria-labelledby="tab-leadership">
+            <div class="timeline">
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">2025 – 2026</span><span class="timeline-place">Cambridge, England</span></div>
+                  <h3>Student Ambassador — University of Cambridge</h3>
+                  <p class="timeline-impact">Represent the University of Cambridge to prospective and incoming students.</p>
+                  <ul>
+                    <li>Support outreach and recruitment events, sharing my experience to help students from underrepresented backgrounds see Cambridge as a place for them.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">May 2025 – Aug 2025</span></div>
+                  <h3>Program Co-Coordinator — <a class="ext-link" href="https://clscholarship.org" target="_blank" rel="noopener">Critical Language Scholarship (CLS)</a>, AUCA</h3>
+                  <p class="timeline-impact">Ran logistics for a 9-week intensive academic program.</p>
+                  <ul>
+                    <li>Coordinated communication between a program team of 11 staff and 27 international scholars from the USA.</li>
+                    <li>Supported the successful day-to-day execution of the program in a fast-paced environment.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Jan 2023 – Jan 2026</span></div>
+                  <h3>Youth Council Member — C5+1 Youth Council</h3>
+                  <p class="timeline-impact">Sustainability-focused project design and leadership across Central Asia.</p>
+                  <ul>
+                    <li>Contributed 23+ hours to project design, proposal development, and leadership training.</li>
+                    <li>Organized a renewable-energy conference for 17 university students from across Central Asia, facilitating discussions on sustainable energy solutions.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Aug 2023 – Sep 2025</span></div>
+                  <h3>Founder &amp; Project Leader — Online Used Book Store (Instagram)</h3>
+                  <p class="timeline-impact">A community book-exchange initiative I built from scratch.</p>
+                  <ul>
+                    <li>Managed collection, exchange, and redistribution of used books, successfully rotating ~800 books through the project.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Aug 2023 – May 2025</span></div>
+                  <h3>Peer Advisor — Academic Advising Office, AUCA</h3>
+                  <p class="timeline-impact">Mentored incoming students through their first year.</p>
+                  <ul>
+                    <li>Guided ~30 first-year students on academic planning, adaptation, and institutional policies.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Aug 2022 – May 2025</span></div>
+                  <h3>Student Art Club Leader — AUCA</h3>
+                  <p class="timeline-impact">Led a 40+ member student club end-to-end.</p>
+                  <ul>
+                    <li>Organized 20+ biweekly sessions (4+ hours each) across the academic year.</li>
+                    <li>Handled end-to-end coordination including budgeting, purchasing, and smooth execution.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="seg-panel" id="panel-community" role="tabpanel" aria-labelledby="tab-community" hidden>
+            <div class="timeline">
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Jun 2025 – Present</span></div>
+                  <h3>Graduate Student Advising Program (GSAP) — <a class="ext-link" href="https://educationusa.state.gov" target="_blank" rel="noopener">EducationUSA</a></h3>
+                  <p class="timeline-impact">Structured preparation for graduate study and an academic career.</p>
+                  <ul>
+                    <li>Strengthened leadership, goal-setting, and strategic planning for graduate studies and work in and beyond academia.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">May 2025</span></div>
+                  <h3>Research Paper Presenter — AUCA First Research Conference</h3>
+                  <p class="timeline-impact">Presented my bachelor's thesis, <em>The Search for Sharac Quandles</em>, to an academic panel.</p>
+                  <ul>
+                    <li>Selected to present my undergraduate thesis research and incorporated interdisciplinary feedback to strengthen the work.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">2023 – 2025</span></div>
+                  <h3>Virtual Language Partner — <a class="ext-link" href="https://warwick.ac.uk" target="_blank" rel="noopener">University of Warwick</a> × AUCA Exchange</h3>
+                  <p class="timeline-impact">Supported the program's team of organizers across two international cohorts.</p>
+                  <ul>
+                    <li>Worked alongside the organizing team to facilitate Russian-language practice and cross-cultural exchange for University of Warwick students.</li>
+                    <li>Helped students build conversational fluency and confidence through structured weekly sessions.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Jun 2023 – Aug 2023</span></div>
+                  <h3>Language Partner — <a class="ext-link" href="https://clscholarship.org" target="_blank" rel="noopener">Critical Language Scholarship (CLS)</a></h3>
+                  <p class="timeline-impact">Supported the team of organizers hosting U.S. scholars in Bishkek.</p>
+                  <ul>
+                    <li>Worked with program organizers to facilitate language practice and cultural adaptation for U.S. students.</li>
+                    <li>Guided scholars in everyday conversational Russian and helped them settle into life in Kyrgyzstan.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta"><span class="timeline-date">Jun 2022 – Aug 2022</span></div>
+                  <h3>Language Partner — <a class="ext-link" href="https://www.nsliforyouth.org" target="_blank" rel="noopener">National Security Language Initiative for Youth (NSLI-Y)</a></h3>
+                  <p class="timeline-impact">Supported the team of organizers hosting U.S. high-school students in Bishkek.</p>
+                  <ul>
+                    <li>Worked with program organizers to deliver language-learning activities and cultural engagement for U.S. high-school students.</li>
+                    <li>Helped participants practice conversational Russian and adapt to the local culture.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">Toolkit</p>
+          <h2 class="section-title">Skills</h2>
+        </header>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3>Machine Learning</h3>
+            <div class="badges"><span>PyTorch</span><span>Scikit-learn</span><span>Model Fine-Tuning</span><span>Benchmarking</span><span>Speech Processing</span></div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>AI Safety</h3>
+            <div class="badges"><span>LLM Security</span><span>Jailbreak Research</span><span>Copyright Extraction</span><span>Alignment</span><span>Evaluation</span></div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Natural Language Processing</h3>
+            <div class="badges"><span>NLP</span><span>ASR</span><span>TTS</span><span>Hugging Face</span><span>Wav2Vec2</span><span>Whisper</span></div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Software Engineering</h3>
+            <div class="badges"><span>Android</span><span>OpenGL</span><span>Augmented Reality</span><span>Swing</span><span>Processing</span><span>doctest</span></div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Programming Languages</h3>
+            <div class="badges"><span>Python</span><span>C</span><span>C++</span><span>Java</span><span>Kotlin</span><span>SQL</span><span>Assembly</span><span>Prolog</span><span>Dafny</span></div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Data Science</h3>
+            <div class="badges"><span>NumPy</span><span>Pandas</span><span>Data Cleaning</span><span>Statistics</span><span>MATLAB</span><span>Mathematica</span></div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Tools</h3>
+            <div class="badges"><span>Git</span><span>Linux / Unix</span><span>Vim</span><span>Excel</span><span>Notion</span><span>Miro</span><span>Canva</span></div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Languages</h3>
+            <div class="badges"><span>Kyrgyz — Native</span><span>Russian — C2</span><span>English — C1</span><span>French — A2</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker light">Get in touch</p>
+          <h2 class="section-title">Contact me</h2>
+          <p class="section-lead light">Open to research collaborations, opportunities, and conversations.</p>
+        </header>
+        <div class="contact-card reveal">
+          <a class="contact-item ci-email" href="mailto:bbermetsultangazieva@gmail.com">
+            <span class="ci-icon">✉️</span>
+            <span class="ci-label">Email</span>
+            <span class="ci-value">bbermetsultangazieva@gmail.com</span>
+          </a>
+          <a class="contact-item" href="https://github.com/sultangazieva-auca-2021" target="_blank" rel="noopener">
+            <span class="ci-icon">💻</span>
+            <span class="ci-label">GitHub</span>
+            <span class="ci-value">sultangazieva-auca-2021</span>
+          </a>
+          <a class="contact-item" href="https://www.linkedin.com/in/bermet-sultangazieva/" target="_blank" rel="noopener">
+            <span class="ci-icon">🔗</span>
+            <span class="ci-label">LinkedIn</span>
+            <span class="ci-value">in/bermet-sultangazieva</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Bermet Sultangazieva</p>
+      <p class="footer-note">Built with HTML, CSS &amp; JavaScript · Hosted on GitHub Pages</p>
+      <a href="#hero" class="footer-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
