@@ -798,8 +798,6 @@ img, canvas { display: block; max-width: 100%; }
 }
 .proj-prose { color: var(--text-soft); font-size: 0.98rem; margin-bottom: 12px; }
 .proj-prose:last-of-type { margin-bottom: 18px; }
-/* Key terminology inside a project write-up */
-.proj-item strong { font-weight: 700; color: var(--navy-700); }
 
 /* ---------- 14. PUBLICATIONS ---------- */
 .research-subhead {
