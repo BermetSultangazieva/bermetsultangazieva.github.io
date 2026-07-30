@@ -786,6 +786,20 @@ img, canvas { display: block; max-width: 100%; }
   background: var(--gray-100);
 }
 .proj-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.proj-advisor { color: var(--navy-600); font-size: 0.95rem; margin: -6px 0 14px; }
+.proj-subhead {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+  margin: 22px 0 12px;
+}
+.proj-prose { color: var(--text-soft); font-size: 0.98rem; margin-bottom: 12px; }
+.proj-prose:last-of-type { margin-bottom: 18px; }
+/* Key terminology inside a project write-up */
+.proj-item strong { font-weight: 700; color: var(--navy-700); }
 
 /* ---------- 14. PUBLICATIONS ---------- */
 .research-subhead {
