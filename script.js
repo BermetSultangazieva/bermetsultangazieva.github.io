@@ -119,6 +119,26 @@
     });
   }
 
+  /* ---------- 5b. RAIL DOTS: light up the card being read ---------- */
+  // Whichever timeline / project / milestone card crosses the middle of the
+  // viewport gets .is-current, which lights its dot on the rail.
+  const railItems = document.querySelectorAll(
+    '.timeline-item, .proj-item, .milestone'
+  );
+  if ('IntersectionObserver' in window && railItems.length) {
+    const railObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          entry.target.classList.toggle('is-current', entry.isIntersecting);
+        });
+      },
+      { rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+    );
+    railItems.forEach(function (el) {
+      railObserver.observe(el);
+    });
+  }
+
   /* ---------- 6. SEGMENTED TABS (experience + leadership) ---------- */
   // Each `.tabbed` group is self-contained: its tabs only toggle the panels
   // that live inside the same group, so multiple tab sets coexist safely.

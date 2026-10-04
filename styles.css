@@ -487,25 +487,10 @@ img, canvas { display: block; max-width: 100%; }
 .about-col p { color: var(--text-soft); }
 
 /* ---------- 10. ACHIEVEMENTS (vertical milestone rail) ---------- */
-.milestones { position: relative; padding-left: 8px; }
-.milestones::before {
-  content: "";
-  position: absolute;
-  left: 19px; top: 8px; bottom: 8px;
-  width: 2px;
-  background: linear-gradient(var(--green-300), var(--gray-200));
-}
-.milestone { position: relative; padding: 0 0 28px 56px; }
+/* Line + dots come from the shared rail block in section 11 */
+.milestones { --dot-top: 22px; }
+.milestone { position: relative; padding: 0 0 28px var(--rail-gutter); }
 .milestone:last-child { padding-bottom: 0; }
-.milestone-dot {
-  position: absolute;
-  left: 12px; top: 6px;
-  width: 16px; height: 16px;
-  border-radius: 50%;
-  background: var(--white);
-  border: 3px solid var(--green-400);
-  box-shadow: 0 0 0 4px rgba(127, 209, 168, 0.18);
-}
 .milestone-card {
   background: var(--white);
   border: 1px solid var(--gray-200);
@@ -527,33 +512,50 @@ img, canvas { display: block; max-width: 100%; }
 .milestone-card p { color: var(--text-soft); font-size: 0.98rem; }
 
 /* ---------- 11. TIMELINES (education + experience) ---------- */
-.timeline { position: relative; padding-left: 8px; }
-.timeline::before {
+/* Shared rail: timelines, project list and achievements all use the same
+   line + dot geometry. The dot sits at x = 0, the 2px line runs through its
+   centre, and --dot-top lines the dot up with the first text line of the card. */
+.timeline, .milestones, .proj-list {
+  --rail-dot: 16px;
+  --rail-gutter: 44px;
+  position: relative;
+}
+.timeline::before, .milestones::before, .proj-list::before {
   content: "";
   position: absolute;
-  /* centred under the 16px markers: 8px padding + 8px half-marker - 1px half-line */
-  left: 15px; top: 10px; bottom: 10px;
+  left: calc(var(--rail-dot) / 2 - 1px);
+  top: calc(var(--dot-top) + var(--rail-dot) / 2);  /* starts at the first dot */
+  bottom: 0;
   width: 2px;
-  background: linear-gradient(var(--navy-500), var(--gray-200));
+  border-radius: 2px;
+  background: linear-gradient(to bottom, var(--green-400), var(--navy-500) 55%, rgba(58, 110, 165, 0) 100%);
+  opacity: 0.55;
 }
-.timeline-item { position: relative; padding: 0 0 36px 44px; }
-.timeline-item:last-child { padding-bottom: 0; }
-.timeline-marker {
+.timeline-marker, .milestone-dot, .proj-item::before {
+  content: "";
   position: absolute;
-  /* level with the date line inside the card (22px padding + ~half a 13px line) */
-  left: 0; top: 25px;
-  width: 16px; height: 16px;
+  left: 0; top: var(--dot-top);
+  width: var(--rail-dot); height: var(--rail-dot);
   border-radius: 50%;
-  background: var(--navy-700);
-  border: 3px solid var(--white);
-  box-shadow: 0 0 0 3px var(--gray-200);
-  transition: transform 0.3s var(--ease), background 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  background: var(--white);
+  border: 3px solid var(--green-400);
+  box-shadow: 0 0 0 4px rgba(127, 209, 168, 0.18);
+  z-index: 1;
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
-.timeline-item:hover .timeline-marker {
-  transform: scale(1.25);
+/* Lit dot: the card being read (JS adds .is-current) or hovered */
+.timeline-item:hover .timeline-marker, .timeline-item.is-current .timeline-marker,
+.milestone:hover .milestone-dot, .milestone.is-current .milestone-dot,
+.proj-item:hover::before, .proj-item.is-current::before {
+  transform: scale(1.2);
   background: var(--green-deep);
-  box-shadow: 0 0 0 4px rgba(127, 209, 168, 0.25);
+  border-color: var(--white);
+  box-shadow: 0 0 0 3px var(--green-400), 0 0 16px 4px rgba(127, 209, 168, 0.55);
 }
+
+.timeline { --dot-top: 24px; }
+.timeline-item { position: relative; padding: 0 0 36px var(--rail-gutter); }
+.timeline-item:last-child { padding-bottom: 0; }
 .timeline-content {
   background: var(--white);
   border: 1px solid var(--gray-200);
@@ -593,7 +595,9 @@ img, canvas { display: block; max-width: 100%; }
   color: var(--text-soft);
   font-size: 0.96rem;
 }
-.timeline-content li::before {
+.timeline-content li::before,
+.proj-points li::before,
+.rc-findings li::before {
   content: "";
   position: absolute;
   /* vertically centred on the first line of text (line-height 1.65) */
@@ -671,8 +675,7 @@ img, canvas { display: block; max-width: 100%; }
   margin-bottom: 8px;
 }
 .rc-findings ul { display: grid; gap: 7px; margin-bottom: 18px; }
-.rc-findings li { position: relative; padding-left: 20px; color: var(--text-soft); font-size: 0.97rem; }
-.rc-findings li::before { content: "→"; position: absolute; left: 0; color: var(--green-deep); font-weight: 700; }
+.rc-findings li { position: relative; padding-left: 18px; color: var(--text-soft); font-size: 0.97rem; }
 .rc-tech, .pc-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .rc-tech span, .pc-tags span {
   font-size: 12.5px;
@@ -725,18 +728,11 @@ img, canvas { display: block; max-width: 100%; }
 
 /* Detailed project list (merged research + projects) — dotted rail like other sections */
 .proj-list {
-  position: relative;
+  --dot-top: 32px;
   list-style: none;
   display: grid;
   gap: 22px;
-  padding-left: 44px;
-}
-.proj-list::before {
-  content: "";
-  position: absolute;
-  left: 7px; top: 12px; bottom: 12px;
-  width: 2px;
-  background: linear-gradient(var(--green-400), var(--gray-200));
+  padding-left: var(--rail-gutter);
 }
 .proj-item {
   position: relative;
@@ -747,16 +743,8 @@ img, canvas { display: block; max-width: 100%; }
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
 }
-.proj-item::before {
-  content: "";
-  position: absolute;
-  left: -44px; top: 28px;
-  width: 16px; height: 16px;
-  border-radius: 50%;
-  background: var(--white);
-  border: 3px solid var(--green-400);
-  box-shadow: 0 0 0 4px rgba(127, 209, 168, 0.18);
-}
+/* The card is the list item, so its dot reaches back into the gutter */
+.proj-item::before { left: calc(-1 * var(--rail-gutter)); }
 .proj-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--green-300); }
 .proj-item > *:last-child { margin-bottom: 0; }
 .proj-head {
@@ -777,8 +765,7 @@ img, canvas { display: block; max-width: 100%; }
 }
 .proj-summary { color: var(--text-soft); margin-bottom: 16px; }
 .proj-points { display: grid; gap: 8px; margin-bottom: 18px; }
-.proj-points li { position: relative; padding-left: 22px; color: var(--text-soft); font-size: 0.98rem; }
-.proj-points li::before { content: "→"; position: absolute; left: 0; color: var(--green-deep); font-weight: 700; }
+.proj-points li { position: relative; padding-left: 18px; color: var(--text-soft); font-size: 0.98rem; }
 .proj-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
 .proj-tags span {
   font-size: 12.5px;
@@ -1044,6 +1031,7 @@ img, canvas { display: block; max-width: 100%; }
   .contact-card { grid-template-columns: 1fr; }
   .journey-grid { grid-template-columns: repeat(4, 1fr); }
   .footer-inner { flex-direction: column; text-align: center; }
+  .timeline, .milestones, .proj-list { --rail-gutter: 32px; }
 }
 
 @media (max-width: 440px) {
