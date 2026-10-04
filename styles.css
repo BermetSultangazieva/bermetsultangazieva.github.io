@@ -531,7 +531,8 @@ img, canvas { display: block; max-width: 100%; }
 .timeline::before {
   content: "";
   position: absolute;
-  left: 7px; top: 10px; bottom: 10px;
+  /* centred under the 16px markers: 8px padding + 8px half-marker - 1px half-line */
+  left: 15px; top: 10px; bottom: 10px;
   width: 2px;
   background: linear-gradient(var(--navy-500), var(--gray-200));
 }
@@ -539,7 +540,8 @@ img, canvas { display: block; max-width: 100%; }
 .timeline-item:last-child { padding-bottom: 0; }
 .timeline-marker {
   position: absolute;
-  left: 0; top: 6px;
+  /* level with the date line inside the card (22px padding + ~half a 13px line) */
+  left: 0; top: 25px;
   width: 16px; height: 16px;
   border-radius: 50%;
   background: var(--navy-700);
@@ -594,7 +596,8 @@ img, canvas { display: block; max-width: 100%; }
 .timeline-content li::before {
   content: "";
   position: absolute;
-  left: 0; top: 10px;
+  /* vertically centred on the first line of text (line-height 1.65) */
+  left: 2px; top: calc(0.825em - 3px);
   width: 6px; height: 6px;
   border-radius: 50%;
   background: var(--green-400);
